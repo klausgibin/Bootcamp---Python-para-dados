@@ -62,30 +62,30 @@
 # fornecido um email válido. Escreva um programa que valide essas condições 
 # e imprima "Dados de usuário válidos" ou o erro específico encontrado.
 
-# import re
+import re
 
-# inf_user = {'idade':'19','email':'####@gmail.com'}
+inf_user = {'idade':'19','email':'####@gmail.com'}
 
-# idade_valida = False
-# email_valido = False
+idade_valida = False
+email_valido = False
 
-# # Validação Range de Idade
-# IDADE_MIN = 18
-# IDADE_MAX = 65
+# Validação Range de Idade
+IDADE_MIN = 18
+IDADE_MAX = 65
 
-# if int(inf_user['idade']) >= IDADE_MIN and int(inf_user['idade']) <= IDADE_MAX:
-#     idade_valida = True
+if int(inf_user['idade']) >= IDADE_MIN and int(inf_user['idade']) <= IDADE_MAX:
+    idade_valida = True
 
-# #Validação E-mail
-# padrao_email = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-# email_valido = re.match(padrao_email,inf_user['email']) is not None
+#Validação E-mail
+padrao_email = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+email_valido = re.match(padrao_email,inf_user['email']) is not None
 
-# if idade_valida and email_valido:
-#     print("Dados de usuário válidos")
-# elif not idade_valida:
-#     print("Idade não está entre 18 e 65 anos")
-# else:    
-#     print("E-mail Inválido")
+if idade_valida and email_valido:
+    print("Dados de usuário válidos")
+elif not idade_valida:
+    print("Idade não está entre 18 e 65 anos")
+else:    
+    print("E-mail Inválido")
 
 
 
